@@ -5,6 +5,9 @@ import Portfolio from './components/Portfolio';
 import CallToAction from './components/CallToAction';
 import Blog from './components/Blog';
 import Services from './components/Services';
+import Testimonial from './components/Testimonial';
+import Contact from './components/Contact';
+import Footer from './components/Footer';
 
 export default function AppPortfolio() {
   return (
@@ -131,6 +134,15 @@ export default function AppPortfolio() {
 
       {/* Services Section */}
       <Services />
+
+      {/* Testimonial Section */}
+      <Testimonial />
+
+      {/* Contact Section */}
+      <Contact />
+
+      {/* Footer Section */}
+      <Footer />
 
     </div>
   );
