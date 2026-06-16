@@ -2,6 +2,8 @@ import React from 'react';
 import './App.css';
 import WorkProcess from './components/WorkProcess';
 import Portfolio from './components/Portfolio';
+import CallToAction from './components/CallToAction';
+import Blog from './components/Blog';
 
 export default function AppPortfolio() {
   return (
@@ -119,6 +121,12 @@ export default function AppPortfolio() {
       <section className="portfolio-section" id="portfolio">
         <Portfolio />
       </section>
+
+      {/* Call To Action Section */}
+      <CallToAction />
+
+      {/* Blog Section */}
+      <Blog />
 
     </div>
   );
