@@ -4,6 +4,7 @@ import WorkProcess from './components/WorkProcess';
 import Portfolio from './components/Portfolio';
 import CallToAction from './components/CallToAction';
 import Blog from './components/Blog';
+import Services from './components/Services';
 
 export default function AppPortfolio() {
   return (
@@ -127,6 +128,9 @@ export default function AppPortfolio() {
 
       {/* Blog Section */}
       <Blog />
+
+      {/* Services Section */}
+      <Services />
 
     </div>
   );
