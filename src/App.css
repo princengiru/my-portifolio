@@ -188,7 +188,8 @@ body, html {
 
 /* --- About Section --- */
 .about-section {
-  padding-bottom: 6rem;
+  position: relative;
+  z-index: 10;
 }
 
 .about-card {
@@ -199,6 +200,7 @@ body, html {
   align-items: center;
   gap: 5rem;
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.03);
+  margin-bottom: -6rem;
 }
 
 .about-image-container {
@@ -294,8 +296,8 @@ body, html {
   width: 100vw;
   left: 50%;
   transform: translateX(-50%);
-  background-color: #f8f9fa; /* Very light cool gray */
-  padding: 6rem 0;
+  background-color: #F0F1F3; /* Very light cool gray */
+  padding: 12rem 0 6rem 0;
 }
 
 .process-container {
