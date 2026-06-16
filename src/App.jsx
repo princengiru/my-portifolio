@@ -1,8 +1,9 @@
 import React from 'react';
 import './App.css';
 import WorkProcess from './components/WorkProcess';
+import Portfolio from './components/Portfolio';
 
-export default function Portfolio() {
+export default function AppPortfolio() {
   return (
     <div className="portfolio-container">
       
@@ -112,6 +113,11 @@ export default function Portfolio() {
       {/* Process Section */}
       <section className="process-section" id="process">
         <WorkProcess />
+      </section>
+
+      {/* Portfolio Section */}
+      <section className="portfolio-section" id="portfolio">
+        <Portfolio />
       </section>
 
     </div>
