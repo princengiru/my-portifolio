@@ -287,3 +287,109 @@ body, html {
   .about-actions { justify-content: center; }
   .about-card { padding: 2rem; }
 }
+
+/* --- Process Section --- */
+.process-section {
+  position: relative;
+  width: 100vw;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #f8f9fa; /* Very light cool gray */
+  padding: 6rem 0;
+}
+
+.process-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  align-items: center;
+  gap: 6rem;
+}
+
+.process-text-column {
+  flex: 0 0 35%;
+}
+
+.process-title {
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 1.5rem;
+}
+
+.process-description p {
+  color: var(--text-gray);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  font-size: 0.85rem;
+}
+
+.process-grid {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.process-card {
+  background-color: white;
+  border-radius: 1rem;
+  padding: 2.5rem;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.03);
+}
+
+.process-card:nth-child(even) {
+  transform: translateY(3rem);
+}
+
+.process-icon-container {
+  width: 56px;
+  height: 56px;
+  border-radius: 1rem;
+  background-color: #f7f2ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.process-icon {
+  width: 24px;
+  height: 24px;
+  color: var(--primary-color);
+}
+
+.process-card.active .process-icon-container {
+  background-color: var(--primary-color);
+}
+
+.process-card.active .process-icon {
+  color: white;
+}
+
+.process-card-title {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 0.75rem;
+}
+
+.process-card-text {
+  font-size: 0.8rem;
+  color: var(--text-gray);
+  line-height: 1.6;
+}
+
+@media (max-width: 992px) {
+  .process-container {
+    flex-direction: column;
+    gap: 3rem;
+  }
+  .process-text-column {
+    text-align: center;
+  }
+  .process-card:nth-child(even) {
+    transform: none;
+  }
+}
