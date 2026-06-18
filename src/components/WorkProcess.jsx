@@ -5,7 +5,7 @@ export default function WorkProcess() {
     {
       id: 1,
       title: "1. Research",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla purus arcu.",
+      description: "Understanding your goals, target audience, and core requirements to lay a solid foundation for the project.",
       icon: (
         <img src={new URL('../assets/icons/research1.svg', import.meta.url).href} alt="" />
       )
@@ -13,15 +13,15 @@ export default function WorkProcess() {
     {
       id: 2,
       title: "2. Analyze",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla purus arcu.",
+      description: "Evaluating technical feasibility, selecting the optimal tech stack, and mapping out the system architecture.",
       icon: (
        <img src={new URL('../assets/icons/analyse.svg', import.meta.url).href} alt="" />
       )
     },
     {
       id: 3,
-      title: "2. Design", /* Matching the design image text which has "2. Design" below "1. Research" */
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla purus arcu.",
+      title: "3. Design", 
+      description: "Crafting intuitive user interfaces, wireframes, and brand identities that ensure a seamless user experience.",
       icon: (
         <svg className="process-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
@@ -31,7 +31,7 @@ export default function WorkProcess() {
     {
       id: 4,
       title: "4. Launch",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla purus arcu.",
+      description: "Writing clean, scalable code, followed by rigorous testing and deployment to bring the product to life.",
       icon: (
         <img src={new URL('../assets/icons/launch.svg', import.meta.url).href} alt="" />
       )
@@ -56,10 +56,10 @@ export default function WorkProcess() {
         <h2 className="process-title">Work Process</h2>
         <div className="process-description">
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla purus arcu, varius eget velit non, laoreet imperdiet orci. Mauris ultrices eget lorem ac vestibulum. Suspendis imperdiet,
+            My approach combines creative problem-solving with technical precision. Whether I am architecting a complex backend database or designing an intuitive mobile interface, I follow a proven, structured workflow.
           </p>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla purus arcu, varius eget velit non.
+            From the initial concept to the final deployment, I ensure every step is carefully planned and executed to deliver scalable and impactful digital solutions.
           </p>
         </div>
       </div>
