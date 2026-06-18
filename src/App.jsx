@@ -106,9 +106,7 @@ export default function AppPortfolio() {
             <div className="about-actions">
               <button className="btn btn-primary">My Project</button>
               <button className="btn btn-outline">
-                <svg className="download-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
-                </svg>
+                 <img src={new URL('./assets/icons/download.svg', import.meta.url).href} alt="download" style={{ width: '15px'}} className='w-20'/>
                 Download CV
               </button>
             </div>
