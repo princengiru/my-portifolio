@@ -36,11 +36,11 @@ export default function AppPortfolio() {
       <section className="hero-section" id="home">
         <div className="hero-content">
           <h1 className="hero-title">
-            Hello, I'm <br /> Prince Hymn.
+            Hello, I'm <br /> Prince NGIRUWONSANGA.
           </h1>
           <p className="hero-subtitle">
-            I'm a Freelance <strong>UI/UX Designer</strong> and <strong>Developer</strong> based in London, England. 
-            I strives to build immersive and beautiful web applications through 
+            I'm a <strong>Senior Web Developer</strong> and <strong>Brand Designer</strong> based in Kigali, Rwanda. 
+            I strive to build immersive and beautiful web and mobile applications through 
             carefully crafted code and user-centric design.
           </p>
           
@@ -48,16 +48,16 @@ export default function AppPortfolio() {
           
           <div className="hero-stats">
             <div className="stat-box">
-              <div className="stat-number">15 Y.</div>
+              <div className="stat-number">2 Y.</div>
               <div className="stat-label">Experience</div>
             </div>
             <div className="stat-box">
-              <div className="stat-number">250+</div>
-              <div className="stat-label">Project Completed</div>
+              <div className="stat-number">10+</div>
+              <div className="stat-label">Projects Completed</div>
             </div>
             <div className="stat-box">
-              <div className="stat-number">58</div>
-              <div className="stat-label">Happy Client</div>
+              <div className="stat-number">5+</div>
+              <div className="stat-label">Happy Clients</div>
             </div>
           </div>
         </div>
@@ -65,7 +65,7 @@ export default function AppPortfolio() {
         <div className="hero-image-wrapper">
           <img 
             src={prince}
-            alt="Prince Hymn" 
+            alt="Prince NGIRUWONSANGA" 
             className="hero-image"
           />
         </div>
@@ -77,7 +77,7 @@ export default function AppPortfolio() {
           <div className="about-image-container">
             <img 
               src={aboutImg}
-              alt="Prince Hymn" 
+              alt="Prince NGIRUWONSANGA" 
               className="about-image"
             />
             {/* Floating Social Bar */}
@@ -91,20 +91,17 @@ export default function AppPortfolio() {
 
           <div className="about-content">
             <h2 className="about-title">
-              I am Professional User <br /> Experience Designer
+              I am a Professional <br /> Full-Stack Developer
             </h2>
             <p className="about-text">
-              I design and develop services for customers specializing creating stylish, 
-              modern websites, web services and online stores. My passion is to design 
-              digital user experiences.
+              I build modern websites, mobile apps, and brand identities that bridge the gap between clean code and intuitive design.
             </p>
             <p className="about-text">
-              I design and develop services for customers specializing creating stylish, 
-              modern websites, web services.
+              My focus is delivering scalable, end-to-end products. I craft responsive front-ends (HTML5, React, Next.js, Tailwind), robust back-ends (Node.js, Express, Python, PHP), seamless mobile apps (React Native, Expo), and reliable databases (MySQL, MongoDB).
             </p>
             
             <div className="about-actions">
-              <button className="btn btn-primary">My Project</button>
+              <button className="btn btn-primary">My Projects</button>
               <button className="btn btn-outline">
                  <img src={new URL('./assets/icons/download.svg', import.meta.url).href} alt="download" style={{ width: '15px'}} className='w-20'/>
                 Download CV
