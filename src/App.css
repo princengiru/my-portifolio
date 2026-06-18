@@ -759,6 +759,10 @@ body, html {
 .testimonial-section {
   padding: 6rem 0;
   background-color: #ffffff;
+  position: relative;
+  width: 100vw;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .testimonial-container {
@@ -865,6 +869,10 @@ body, html {
   position: relative;
   z-index: 10;
   margin-bottom: -10rem; /* Creates the overlap with footer */
+  width: 100vw;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(to bottom, #ffffff calc(100% - 10rem), transparent calc(100% - 10rem));
 }
 
 .contact-card {
