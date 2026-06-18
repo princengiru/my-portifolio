@@ -37,10 +37,10 @@ export default function Contact() {
           </div>
 
           <div className="contact-socials">
-            <a href="#" className="social-icon active">f</a>
-            <a href="#" className="social-icon">🏀</a>
-            <a href="#" className="social-icon">📷</a>
-            <a href="#" className="social-icon">in</a>
+            <a href="#" className="social-icon active"><img src={new URL('../assets/icons/facebook.svg', import.meta.url).href} alt="Facebook" /></a>
+            <a href="#" className="social-icon"><img src={new URL('../assets/icons/whatsapp.svg', import.meta.url).href} alt="WhatsApp" /></a>
+            <a href="#" className="social-icon"><img src={new URL('../assets/icons/instagram.svg', import.meta.url).href} alt="Instagram" /></a>
+            <a href="#" className="social-icon"><img src={new URL('../assets/icons/linkedin.svg', import.meta.url).href} alt="LinkedIn" /></a>
           </div>
         </div>
 

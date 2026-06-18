@@ -6,8 +6,7 @@ export default function Footer() {
       <div className="footer-container">
         
         <div className="footer-logo">
-          <div className="brand-logo">B</div>
-          <div className="brand-name" style={{ color: 'white' }}>Brooklyn</div>
+          <div className="brand-logo-text"><span className="brace">{'{'}</span>prnc<span className="brace">{'}'}</span></div>
         </div>
 
         <div className="footer-links">

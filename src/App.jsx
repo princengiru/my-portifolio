@@ -8,6 +8,8 @@ import Services from './components/Services';
 import Testimonial from './components/Testimonial';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import prince from "./assets/hero-image.jpeg"
+import aboutImg from "./assets/about-image.jpeg"
 
 export default function AppPortfolio() {
   return (
@@ -16,8 +18,7 @@ export default function AppPortfolio() {
       {/* Navigation */}
       <nav className="navbar">
         <div className="nav-brand">
-          <div className="brand-logo">B</div>
-          <div className="brand-name">Brooklyn</div>
+          <div className="brand-logo-text"><span className="brace">{'{'}</span>prnc<span className="brace">{'}'}</span></div>
         </div>
         
         <div className="nav-links">
@@ -35,7 +36,7 @@ export default function AppPortfolio() {
       <section className="hero-section" id="home">
         <div className="hero-content">
           <h1 className="hero-title">
-            Hello, I'm <br /> Brooklyn Gilbert
+            Hello, I'm <br /> Prince Hymn.
           </h1>
           <p className="hero-subtitle">
             I'm a Freelance <strong>UI/UX Designer</strong> and <strong>Developer</strong> based in London, England. 
@@ -63,8 +64,8 @@ export default function AppPortfolio() {
 
         <div className="hero-image-wrapper">
           <img 
-            src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
-            alt="Brooklyn Gilbert" 
+            src={prince}
+            alt="Prince Hymn" 
             className="hero-image"
           />
         </div>
@@ -75,17 +76,16 @@ export default function AppPortfolio() {
         <div className="about-card">
           <div className="about-image-container">
             <img 
-              src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
-              alt="Brooklyn Gilbert Portrait" 
+              src={aboutImg}
+              alt="Prince Hymn" 
               className="about-image"
             />
             {/* Floating Social Bar */}
             <div className="social-bar">
-              <a href="#" className="social-icon">f</a>
-              <a href="#" className="social-icon">🏀</a>
-              <a href="#" className="social-icon">📷</a>
-              <a href="#" className="social-icon active">in</a>
-              <a href="#" className="social-icon">Bē</a>
+              <a href="#" className="social-icon"><img src={new URL('./assets/icons/facebook.svg', import.meta.url).href} alt="Facebook" /></a>
+              <a href="#" className="social-icon"><img src={new URL('./assets/icons/whatsapp.svg', import.meta.url).href} alt="WhatsApp" /></a>
+              <a href="#" className="social-icon"><img src={new URL('./assets/icons/instagram.svg', import.meta.url).href} alt="Instagram" /></a>
+              <a href="#" className="social-icon active"><img src={new URL('./assets/icons/linkedin.svg', import.meta.url).href} alt="LinkedIn" /></a>
             </div>
           </div>
 
