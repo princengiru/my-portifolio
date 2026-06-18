@@ -12,7 +12,7 @@ export default function Contact() {
           
           <div className="contact-details">
             <div className="contact-detail-item active">
-              <div className="detail-icon">📍</div>
+              <div className="detail-icon"><img src={new URL('../assets/icons/location-active.svg', import.meta.url).href} alt="Facebook" /></div>
               <div className="detail-text">
                 <span className="detail-label">Address:</span>
                 <span className="detail-value">New Mexico 31134</span>
@@ -20,24 +20,24 @@ export default function Contact() {
             </div>
             
             <div className="contact-detail-item">
-              <div className="detail-icon">✉️</div>
+              <div className="detail-icon"><img src={new URL('../assets/icons/mail.svg', import.meta.url).href} alt="Facebook" /></div>
               <div className="detail-text">
                 <span className="detail-label">My Email:</span>
-                <span className="detail-value">mymail@mail.com</span>
+                <span className="detail-value">ngiruprince@gmail.com</span>
               </div>
             </div>
             
             <div className="contact-detail-item">
-              <div className="detail-icon">📞</div>
+              <div className="detail-icon"><img src={new URL('../assets/icons/phone.svg', import.meta.url).href} alt="Facebook" /></div>
               <div className="detail-text">
                 <span className="detail-label">Call Me Now:</span>
-                <span className="detail-value">00 1234 50000</span>
+                <span className="detail-value">+250 786 263 874</span>
               </div>
             </div>
           </div>
 
           <div className="contact-socials">
-            <a href="#" className="social-icon active"><img src={new URL('../assets/icons/facebook.svg', import.meta.url).href} alt="Facebook" /></a>
+            <a href="#" className="social-icon active"><img src={new URL('../assets/icons/facebook-active.svg', import.meta.url).href} alt="Facebook" /></a>
             <a href="#" className="social-icon"><img src={new URL('../assets/icons/whatsapp.svg', import.meta.url).href} alt="WhatsApp" /></a>
             <a href="#" className="social-icon"><img src={new URL('../assets/icons/instagram.svg', import.meta.url).href} alt="Instagram" /></a>
             <a href="#" className="social-icon"><img src={new URL('../assets/icons/linkedin.svg', import.meta.url).href} alt="LinkedIn" /></a>
