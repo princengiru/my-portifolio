@@ -1,4 +1,5 @@
 import React from 'react';
+import cefapekImg from '../assets/cefapek.png';
 
 export default function Portfolio() {
   const portfolioItems = [
@@ -40,7 +41,7 @@ export default function Portfolio() {
     },
     {
       id: 5,
-      image: "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=600&h=400&fit=crop", 
+      image: cefapekImg, 
       category: "NON-PROFIT",
       title: "CEFAPEK Organization",
       description: "An informative NGO platform focused on empowering local communities through sustainable agricultural and livestock development in the Kamonyi District.",
