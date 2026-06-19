@@ -1,5 +1,9 @@
 import React from 'react';
 import cefapekImg from '../assets/cefapek.png';
+import lkgroupImg from '../assets/lkgroup.png';
+import eliteImg from '../assets/elite.png';
+import gonarazaImg from '../assets/gonaraza.png';
+import chairfemmesImg from '../assets/chairfemmes.png';
 
 export default function Portfolio() {
   const portfolioItems = [
@@ -14,7 +18,7 @@ export default function Portfolio() {
     },
     {
       id: 2,
-      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop", 
+      image: chairfemmesImg, 
       category: "FULL-STACK WEB",
       title: "Chair Femmes",
       description: "A web platform dedicated to holistic sexology and women's empowerment, built with PHP and CSS to offer a safe digital space for therapy and wellness services.",
@@ -23,7 +27,7 @@ export default function Portfolio() {
     },
     {
       id: 3,
-      image: "https://images.unsplash.com/photo-1557821552-17105176677c?w=600&h=400&fit=crop", 
+      image: lkgroupImg, 
       category: "CORPORATE PLATFORM",
       title: "LK Group World",
       description: "A robust corporate website for a leading technology solutions provider, highlighting their innovative IT support, digital consulting, and global services.",
@@ -32,7 +36,7 @@ export default function Portfolio() {
     },
     {
       id: 4,
-      image: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=600&h=400&fit=crop", 
+      image: eliteImg, 
       category: "BUSINESS WEBSITE",
       title: "Elite Concierge",
       description: "A sophisticated digital presence for a premier lifestyle management service, designed to showcase personalized, luxury concierge solutions tailored for Rwanda.",
@@ -50,7 +54,7 @@ export default function Portfolio() {
     },
     {
       id: 6,
-      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop", 
+      image: gonarazaImg, 
       category: "WEB PLATFORM",
       title: "Gonaraza",
       description: "A comprehensive digital marketplace and business directory connecting businesses and customers across Rwanda through dynamic listings, jobs, and digital services.",
