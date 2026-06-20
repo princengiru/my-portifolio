@@ -82,10 +82,10 @@ export default function AppPortfolio() {
             />
             {/* Floating Social Bar */}
             <div className="social-bar">
-              <a href="#" className="social-icon"><img src={new URL('./assets/icons/facebook.svg', import.meta.url).href} alt="Facebook" /></a>
-              <a href="#" className="social-icon"><img src={new URL('./assets/icons/whatsapp.svg', import.meta.url).href} alt="WhatsApp" /></a>
-              <a href="#" className="social-icon"><img src={new URL('./assets/icons/instagram.svg', import.meta.url).href} alt="Instagram" /></a>
-              <a href="#" className="social-icon active"><img src={new URL('./assets/icons/linkedin-active.svg', import.meta.url).href} alt="LinkedIn" /></a>
+              <a href="https://github.com/princengiru" target="_blank" rel="noopener noreferrer" className="social-icon"><img src={new URL('./assets/icons/github.svg', import.meta.url).href} alt="GitHub" /></a>
+              <a href="https://wa.me/250786263874" target="_blank" rel="noopener noreferrer" className="social-icon"><img src={new URL('./assets/icons/whatsapp.svg', import.meta.url).href} alt="WhatsApp" /></a>
+              <a href="https://www.instagram.com/prince_hymn/" target="_blank" rel="noopener noreferrer" className="social-icon"><img src={new URL('./assets/icons/instagram.svg', import.meta.url).href} alt="Instagram" /></a>
+              <a href="https://www.linkedin.com/in/prince-ngiruwonsanga-285325323/" target="_blank" rel="noopener noreferrer" className="social-icon active"><img src={new URL('./assets/icons/linkedin-active.svg', import.meta.url).href} alt="LinkedIn" /></a>
             </div>
           </div>
 
