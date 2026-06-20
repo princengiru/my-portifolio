@@ -76,7 +76,7 @@ export default function Contact() {
               <label>Message*</label>
               <input type="text" className="form-input" />
             </div>
-            <button type="button" className="btn btn-primary submit-btn">Submit <span>&rarr;</span></button>
+            <button type="button" className="btn btn-primary submit-btn" style={{display: 'flex', alignItems: 'center', gap: '0.5rem',fontSize: '1rem', fontWeight: '500', cursor: 'pointer', border: 'none',}}>Submit <img src={new URL('../assets/icons/send.svg', import.meta.url).href} alt="Send" style={{width: '16px', height: '16px'}} /></button>
           </form>
         </div>
 
