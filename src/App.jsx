@@ -48,7 +48,7 @@ export default function AppPortfolio() {
           
           <div className="hero-stats">
             <div className="stat-box">
-              <div className="stat-number">2 Y.</div>
+              <div className="stat-number">5+ Y.</div>
               <div className="stat-label">Experience</div>
             </div>
             <div className="stat-box">
@@ -82,7 +82,7 @@ export default function AppPortfolio() {
             />
             {/* Floating Social Bar */}
             <div className="social-bar">
-              <a href="https://github.com/princengiru" target="_blank" rel="noopener noreferrer" className="social-icon"><img src={new URL('./assets/icons/github.svg', import.meta.url).href} alt="GitHub" /></a>
+              <a href="https://github.com/princengiru" target="_blank" rel="noopener noreferrer" className="social-icon"><img src={new URL('./assets/icons/github.svg', import.meta.url).href} alt="GitHub" style={{width: '24px', height: '24px'}}/></a>
               <a href="https://wa.me/250786263874" target="_blank" rel="noopener noreferrer" className="social-icon"><img src={new URL('./assets/icons/whatsapp.svg', import.meta.url).href} alt="WhatsApp" /></a>
               <a href="https://www.instagram.com/prince_hymn/" target="_blank" rel="noopener noreferrer" className="social-icon"><img src={new URL('./assets/icons/instagram.svg', import.meta.url).href} alt="Instagram" /></a>
               <a href="https://www.linkedin.com/in/prince-ngiruwonsanga-285325323/" target="_blank" rel="noopener noreferrer" className="social-icon active"><img src={new URL('./assets/icons/linkedin-active.svg', import.meta.url).href} alt="LinkedIn" /></a>
