@@ -15,7 +15,7 @@ export default function Contact() {
               <div className="detail-icon"><img src={new URL('../assets/icons/location-active.svg', import.meta.url).href} alt="Facebook" /></div>
               <div className="detail-text">
                 <span className="detail-label">Address:</span>
-                <span className="detail-value">New Mexico 31134</span>
+                <span className="detail-value">Kigali, Rwanda</span>
               </div>
             </div>
             
@@ -23,7 +23,7 @@ export default function Contact() {
               <div className="detail-icon"><img src={new URL('../assets/icons/mail.svg', import.meta.url).href} alt="Facebook" /></div>
               <div className="detail-text">
                 <span className="detail-label">My Email:</span>
-                <span className="detail-value">ngiruprince@gmail.com</span>
+                <span className="detail-value">hello@prnc.dev</span>
               </div>
             </div>
             
