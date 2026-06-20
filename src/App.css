@@ -534,8 +534,7 @@ html {
 }
 
 .portfolio-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.06);
+  transform: translateY(-1px);
 }
 
 .portfolio-image {
