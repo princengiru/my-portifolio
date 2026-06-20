@@ -6,6 +6,10 @@
   --font-main: 'Inter', system-ui, sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body,
 html {
   margin: 0;
