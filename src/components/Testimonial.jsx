@@ -27,7 +27,7 @@ export default function Testimonial() {
             <img src={lkGroupLogo} alt="LK Group" className="client-logo" />
           </a>
           <a href="https://chairfemmes.com" target="_blank" rel="noopener noreferrer">
-            <img src={chairFemmesLogo} alt="Chair Femmes" className="client-logo" />
+            <img src={chairFemmesLogo} alt="Chair Femmes" className="client-logo chair-femmes-logo" />
           </a>
           <a href="https://eliteconcierge.rw" target="_blank" rel="noopener noreferrer">
             <img src={eliteLogo} alt="Elite Concierge" className="client-logo" />

@@ -918,6 +918,11 @@ html {
   object-fit: contain;
 }
 
+.client-logo.chair-femmes-logo {
+  max-height: 90px;
+  transform: scale(1.35);
+}
+
 .testimonial-content {
   margin-bottom: 2.5rem;
 }
