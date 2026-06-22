@@ -1,4 +1,9 @@
 import React from 'react';
+// Import the actual logos from your assets folder
+import gonarazaLogo from '../assets/gonarazalogo.png';
+import lkGroupLogo from '../assets/lkgrouplogo.png';
+import chairFemmesLogo from '../assets/chairfemmeslogo.png';
+import eliteLogo from '../assets/elitelogo.png';
 
 export default function Testimonial() {
   return (
@@ -13,13 +18,12 @@ export default function Testimonial() {
           </p>
         </div>
 
+        {/* Updated Clients Logos Section */}
         <div className="clients-logos">
-          <span className="client-logo">Google</span>
-          <span className="client-logo" style={{ fontStyle: 'italic' }}>dribbble</span>
-          <span className="client-logo client-logo-linkedin">Linked<span>in</span></span>
-          <span className="client-logo">amazon</span>
-          <span className="client-logo">Medium</span>
-          <span className="client-logo">Spotify</span>
+          <img src={gonarazaLogo} alt="Gonaraza" className="client-logo" />
+          <img src={lkGroupLogo} alt="LK Group" className="client-logo" />
+          <img src={chairFemmesLogo} alt="Chair Femmes" className="client-logo" />
+          <img src={eliteLogo} alt="Elite Concierge" className="client-logo" />
         </div>
 
         <div className="testimonial-header">
