@@ -1,4 +1,5 @@
 import React from 'react';
+import forwardSlashIcon from '../assets/icons/forward-slash.svg';
 
 export default function CallToAction() {
   return (
@@ -12,7 +13,8 @@ export default function CallToAction() {
           Whether you need a scalable web platform, a custom mobile app, <br />
           or a complete brand identity, I am ready to help you build something exceptional.
         </p>
-        <button className="btn btn-primary cta-btn">Let's Work Together &rarr;</button>
+        <button className="btn btn-primary cta-btn">Let's Work Together <img src={forwardSlashIcon} alt="arrow-right" /></button>
+        
       </div>
     </section>
   );
