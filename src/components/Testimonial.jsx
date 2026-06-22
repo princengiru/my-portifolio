@@ -20,10 +20,18 @@ export default function Testimonial() {
 
         {/* Updated Clients Logos Section */}
         <div className="clients-logos">
-          <img src={gonarazaLogo} alt="Gonaraza" className="client-logo" />
-          <img src={lkGroupLogo} alt="LK Group" className="client-logo" />
-          <img src={chairFemmesLogo} alt="Chair Femmes" className="client-logo" />
-          <img src={eliteLogo} alt="Elite Concierge" className="client-logo" />
+          <a href="https://gonaraza.com" target="_blank" rel="noopener noreferrer">
+            <img src={gonarazaLogo} alt="Gonaraza" className="client-logo" />
+          </a>
+          <a href="https://lkgroupworld.com" target="_blank" rel="noopener noreferrer">
+            <img src={lkGroupLogo} alt="LK Group" className="client-logo" />
+          </a>
+          <a href="https://chairfemmes.com" target="_blank" rel="noopener noreferrer">
+            <img src={chairFemmesLogo} alt="Chair Femmes" className="client-logo" />
+          </a>
+          <a href="https://eliteconcierge.rw" target="_blank" rel="noopener noreferrer">
+            <img src={eliteLogo} alt="Elite Concierge" className="client-logo" />
+          </a>
         </div>
 
 
