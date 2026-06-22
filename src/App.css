@@ -817,7 +817,7 @@ html {
 
 .service-card {
   background-color: #232819;
-  border-radius: 0.5rem;
+  border-radius: 3px;
   padding: 2rem 2.5rem;
   transition: all 0.3s ease;
   border-left: 4px solid transparent;
