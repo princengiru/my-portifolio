@@ -4,18 +4,18 @@ export default function Services() {
   const services = [
     {
       id: 1,
-      title: "User Experience (UX)",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla purus arcu, varius eget velit non, laoreet imperdiet orci. Mauris ultrices eget lorem ac vestibulum."
+      title: "Full-Stack Web Development",
+      description: "Building responsive, high-performance web applications from the ground up. I create seamless front-end interfaces with React and Next.js, powered by robust, scalable backends using Node.js, Express, and PHP."
     },
     {
       id: 2,
-      title: "User Interface (UI)",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla purus arcu, varius eget velit non, laoreet imperdiet orci. Mauris ultrices eget lorem ac vestibulum."
+      title: "Mobile App Development",
+      description: "Developing smooth, cross-platform mobile experiences for both iOS and Android. Using React Native and Expo, I build applications that deliver native-like performance and intuitive navigation."
     },
     {
       id: 3,
-      title: "Web Development",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla purus arcu, varius eget velit non, laoreet imperdiet orci. Mauris ultrices eget lorem ac vestibulum."
+      title: "Brand Identity & UI/UX",
+      description: "Crafting visually compelling brand identities and user-centric interfaces. From wireframes to complete corporate identity kits, I ensure your digital presence is both beautiful and highly functional."
     }
   ];
 
@@ -28,10 +28,10 @@ export default function Services() {
           <h2 className="services-title">What I do?</h2>
           <div className="services-description">
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla purus arcu, varius eget velit non, laoreet imperdiet orci. Mauris ultrices eget lorem ac vestibulum. Suspendis imperdiet,
+              I specialize in transforming complex problems into elegant, scalable digital solutions. With expertise across the entire development stack and an eye for design, I bring ideas to life from initial concept to final deployment.
             </p>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla purus arcu, varius eget velit non.
+              Whether you need a dynamic web platform, a custom mobile application, or a complete brand overhaul, I deliver high-quality products tailored directly to your business goals.
             </p>
           </div>
           <button className="btn btn-primary">Say Hello!</button>
