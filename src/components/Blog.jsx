@@ -62,9 +62,16 @@ export default function Blog() {
     if (gridRef.current) {
       const { scrollLeft, clientWidth } = gridRef.current;
 
-      const index = Math.floor(scrollLeft / clientWidth);
-      if (index !== currentPage && index <= totalPages - 1) {
-        setCurrentPage(index);
+      // Only change page when we're at the start of a page (first card visible)
+      // Use a threshold to prevent switching during scroll
+      const threshold = 50; // pixels
+      const pageIndex = Math.round(scrollLeft / clientWidth);
+      
+      // Check if we're close to the start of a page
+      const distanceToPageStart = Math.abs(scrollLeft - (pageIndex * clientWidth));
+      
+      if (distanceToPageStart < threshold && pageIndex !== currentPage && pageIndex <= totalPages - 1) {
+        setCurrentPage(pageIndex);
       }
     }
   };
