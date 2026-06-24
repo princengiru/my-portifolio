@@ -12,7 +12,7 @@ export default function Contact() {
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [result, setResult] = useState(""); // State for UI feedback messages
+  const [toast, setToast] = useState({ show: false, title: '', message: '', type: 'success' });
 
   // 2. Handle input changes dynamically
   const handleChange = (e) => {
@@ -27,7 +27,6 @@ export default function Contact() {
   const handleSubmit = async (e) => {
     e.preventDefault(); 
     setIsSubmitting(true);
-    setResult(""); // Clear any previous messages
 
     // Add your access key to the payload
     const payload = {
@@ -48,19 +47,23 @@ export default function Contact() {
       const data = await response.json();
 
       if (data.success) {
-        setResult("✅ Message sent successfully! I will get back to you soon.");
+        setToast({ show: true, title: 'Success', message: 'Message sent successfully! I will get back to you soon.', type: 'success' });
         // Reset form fields
-        setFormData({ name: '', email: '', location: '', budget: '', subject: '', message: '' }); 
-        
-        // Optional: clear the success message after 5 seconds
-        setTimeout(() => setResult(""), 5000);
+        setFormData({ name: '', email: '', location: '', budget: '', subject: '', message: '' });
+
+        // Hide toast after 10 seconds
+        setTimeout(() => setToast({ show: false, title: '', message: '', type: 'success' }), 10000);
       } else {
-        setResult("❌ Error: " + data.message);
+        setToast({ show: true, title: 'Error', message: data.message, type: 'error' });
+        // Hide error toast after 10 seconds
+        setTimeout(() => setToast({ show: false, title: '', message: '', type: 'error' }), 10000);
       }
-      
+
     } catch (error) {
       console.error("Error submitting form:", error);
-      setResult("❌ Failed to send message. Please check your connection and try again.");
+      setToast({ show: true, title: 'Error', message: 'Failed to send message. Please check your connection and try again.', type: 'error' });
+      // Hide error toast after 10 seconds
+      setTimeout(() => setToast({ show: false, title: '', message: '', type: 'error' }), 10000);
     } finally {
       setIsSubmitting(false);
     }
@@ -157,18 +160,45 @@ export default function Contact() {
                 {isSubmitting ? 'Sending...' : 'Submit'} 
                 <img src={new URL('../assets/icons/send.svg', import.meta.url).href} alt="Send" style={{width: '16px', height: '16px'}} />
               </button>
-
-              {/* Added a span to display the success/error message directly next to the button */}
-              {result && (
-                <span style={{ fontSize: '0.9rem', color: result.includes('❌') ? '#ef4444' : '#10b981', fontWeight: '500' }}>
-                  {result}
-                </span>
-              )}
             </div>
           </form>
         </div>
 
       </div>
+
+      {/* Toast Notification */}
+      {toast.show && (
+        <div className={`toast toast-${toast.type}`}>
+          <div className="toast-content">
+            <span className="toast-icon">
+              {toast.type === 'success' && (
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                  <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                </svg>
+              )}
+              {toast.type === 'info' && (
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <line x1="12" y1="16" x2="12" y2="12"></line>
+                  <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                </svg>
+              )}
+              {toast.type === 'error' && (
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <line x1="12" y1="8" x2="12" y2="12"></line>
+                  <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                </svg>
+              )}
+            </span>
+            <div className="toast-message">
+              <div className="toast-title">{toast.title}</div>
+              <div className="toast-description">{toast.message}</div>
+            </div>
+          </div>
+        </div>
+      )}
     </section>
   );
 }

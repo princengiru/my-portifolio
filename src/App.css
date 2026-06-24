@@ -1214,4 +1214,120 @@ html {
     flex-wrap: wrap;
     justify-content: center;
   }
+
+  .footer-copyright {
+    text-align: center;
+  }
+}
+
+/* --- Toast Notification --- */
+.toast {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 1000;
+  animation: slideIn 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.toast-content {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.25rem 1.5rem;
+  border-radius: 12px;
+  background-color: #ffffff;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+  min-width: 320px;
+  position: relative;
+  overflow: hidden;
+  border: none;
+}
+
+/* Faded Grid Background overlay */
+.toast-content::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 65%;
+  background-image: 
+    linear-gradient(#f1f5f9 1px, transparent 1px),
+    linear-gradient(90deg, #f1f5f9 1px, transparent 1px);
+  background-size: 16px 16px;
+  mask-image: linear-gradient(to right, transparent, black);
+  -webkit-mask-image: linear-gradient(to right, transparent, black);
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Ensure text stays above the background grid */
+.toast-icon, 
+.toast-message {
+  position: relative;
+  z-index: 1;
+}
+
+/* Solid gradients based on toast type to prevent dark background bleed */
+.toast-success .toast-content {
+  background-image: linear-gradient(90deg, #e6f9ed 0%, #ffffff 40%);
+}
+.toast-info .toast-content {
+  background-image: linear-gradient(90deg, #eef4ff 0%, #ffffff 40%);
+}
+.toast-error .toast-content {
+  background-image: linear-gradient(90deg, #ffeced 0%, #ffffff 40%);
+}
+
+.toast-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.5rem;
+  height: 1.5rem;
+  flex-shrink: 0;
+  background-color: transparent;
+}
+
+/* Match the exact SVG colors from your image */
+.toast-success .toast-icon { color: #10b981; }
+.toast-info .toast-icon { color: #3b82f6; }
+.toast-error .toast-icon { color: #ef4444; }
+
+.toast-message {
+  flex: 1;
+}
+
+.toast-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 0.2rem;
+  font-family: var(--font-main);
+}
+
+.toast-description {
+  font-size: 0.85rem;
+  color: #4b5563;
+  line-height: 1.4;
+  font-family: var(--font-main);
+}
+
+@media (max-width: 640px) {
+  .toast {
+    bottom: 1rem;
+    right: 1rem;
+    left: 1rem;
+  }
 }
