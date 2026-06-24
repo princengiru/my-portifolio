@@ -20,7 +20,7 @@ export default function Footer() {
         </div>
 
         <div className="footer-copyright">
-          Copyright &copy; 2023 Pikox.
+          Copyright &copy; {new Date().getFullYear()} Prince.
         </div>
 
       </div>
