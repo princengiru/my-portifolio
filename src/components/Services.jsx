@@ -19,6 +19,13 @@ export default function Services() {
     }
   ];
 
+  const scrollToContact = () => {
+    const contactSection = document.getElementById('contact');
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <section className="services-section" id="services">
       <div className="services-container">
@@ -34,7 +41,7 @@ export default function Services() {
               Whether you need a dynamic web platform, a custom mobile application, or a complete brand overhaul, I deliver high-quality products tailored directly to your business goals.
             </p>
           </div>
-          <button className="btn btn-primary">Say Hello!</button>
+          <button className="btn btn-primary" onClick={scrollToContact}>Say Hello!</button>
         </div>
 
         {/* Right Column */}
