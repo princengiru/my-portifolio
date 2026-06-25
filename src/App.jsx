@@ -19,6 +19,13 @@ export default function AppPortfolio() {
     }
   };
 
+  const scrollToPortfolio = () => {
+    const portfolioSection = document.getElementById('portfolio');
+    if (portfolioSection) {
+      portfolioSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <div className="portfolio-container">
       
@@ -108,7 +115,7 @@ export default function AppPortfolio() {
             </p>
             
             <div className="about-actions">
-              <button className="btn btn-primary">My Projects</button>
+              <button className="btn btn-primary" onClick={scrollToPortfolio} >My Projects</button>
               <a href={new URL('./assets/docs/Portfolio CV.pdf', import.meta.url).href} download="Prince_Ngiruwonsanga_CV.pdf" className="btn btn-outline">
                  <img src={new URL('./assets/icons/download.svg', import.meta.url).href} alt="download" style={{ width: '15px'}} className='w-20'/>
                 Download CV
