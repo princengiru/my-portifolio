@@ -28,7 +28,15 @@ export default function AppPortfolio() {
 
   return (
     <div className="portfolio-container">
-      
+      {/* Mobile Notice */}
+      <div className="mobile-notice">
+        <div className="mobile-notice-content">
+          <h2>Desktop Only</h2>
+          <p>This website is currently optimized for desktop viewing only.</p>
+          <p className="mobile-notice-sub">Mobile version coming soon!</p>
+        </div>
+      </div>
+
       {/* Navigation */}
       <nav className="navbar">
         <div className="nav-brand">

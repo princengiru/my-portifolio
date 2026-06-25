@@ -10,6 +10,55 @@ html {
   scroll-behavior: smooth;
 }
 
+/* --- Mobile Notice --- */
+.mobile-notice {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #1b2014;
+  z-index: 9999;
+  align-items: center;
+  justify-content: center;
+}
+
+.mobile-notice-content {
+  text-align: center;
+  padding: 2rem;
+  color: #f4f7e6;
+}
+
+.mobile-notice-content h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+}
+
+.mobile-notice-content p {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  color: #b8c4a8;
+}
+
+.mobile-notice-sub {
+  font-size: 0.9rem;
+  margin-top: 1.5rem;
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+@media (max-width: 1024px) {
+  .mobile-notice {
+    display: flex;
+  }
+
+  .portfolio-container > *:not(.mobile-notice) {
+    display: none;
+  }
+}
+
 body,
 html {
   margin: 0;
@@ -1181,15 +1230,25 @@ html {
   justify-content: center;
   gap: 2rem;
 }
+.footer-links a{
+  text-decoration: none;
+  color: var(--text-dark);
+  font-weight: 600;
+  font-size: 0.8rem;
+}
 
-.footer-links a {
+.footer-links button {
+  background: none;
+  border: none;
   color: #c3ccb8;
   text-decoration: none;
   font-size: 0.9rem;
   transition: color 0.3s ease;
+  cursor: pointer;
+  padding: 0;
 }
 
-.footer-links a:hover {
+.footer-links button:hover {
   color: white;
 }
 
