@@ -78,7 +78,7 @@ export default function AppPortfolio() {
               <div className="stat-label">Projects Completed</div>
             </div>
             <div className="stat-box">
-              <div className="stat-number">5+</div>
+              <div className="stat-number">10+</div>
               <div className="stat-label">Happy Clients</div>
             </div>
           </div>
