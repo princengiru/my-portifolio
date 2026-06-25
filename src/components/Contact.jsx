@@ -6,7 +6,6 @@ export default function Contact() {
     name: '',
     email: '',
     location: '',
-    budget: '',
     subject: '',
     message: ''
   });
@@ -49,7 +48,7 @@ export default function Contact() {
       if (data.success) {
         setToast({ show: true, title: 'Success', message: 'Message sent successfully! I will get back to you soon.', type: 'success' });
         // Reset form fields
-        setFormData({ name: '', email: '', location: '', budget: '', subject: '', message: '' });
+        setFormData({ name: '', email: '', location: '', subject: '', message: '' });
 
         // Hide toast after 10 seconds
         setTimeout(() => setToast({ show: false, title: '', message: '', type: 'success' }), 10000);
@@ -119,7 +118,7 @@ export default function Contact() {
         <div className="contact-form-container">
           {/* Replaced Lorem Ipsum with professional instruction */}
           <p className="contact-subtitle" style={{marginBottom: '2rem'}}>
-            Fill out the form below with your project details, and I'll get back to you within 24 hours.
+           Fill out the form below, and I'll get back to you within 24 hours.
           </p>
           
           <form className="contact-form" onSubmit={handleSubmit}>
@@ -135,15 +134,9 @@ export default function Contact() {
               <label>Location</label>
               <input type="text" name="location" value={formData.location} onChange={handleChange} className="form-input" />
             </div>
-            <div className="form-row">
-              <div className="form-group">
-                <label>Budget*</label>
-                <input type="text" name="budget" value={formData.budget} onChange={handleChange} required className="form-input" />
-              </div>
-              <div className="form-group">
-                <label>Subject*</label>
-                <input type="text" name="subject" value={formData.subject} onChange={handleChange} required className="form-input" />
-              </div>
+            <div className="form-group">
+              <label>Subject*</label>
+              <input type="text" name="subject" value={formData.subject} onChange={handleChange} required className="form-input" />
             </div>
             <div className="form-group">
               <label>Message*</label>
