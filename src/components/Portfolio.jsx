@@ -105,10 +105,6 @@ export default function Portfolio() {
           </div>
         ))}
       </div>
-
-      <div className="portfolio-footer">
-        <button className="btn btn-primary">More Projects</button>
-      </div>
     </div>
   );
 }
