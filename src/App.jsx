@@ -12,6 +12,13 @@ import prince from "./assets/hero-image.jpeg"
 import aboutImg from "./assets/about-image.jpeg"
 
 export default function AppPortfolio() {
+  const scrollToContact = () => {
+    const contactSection = document.getElementById('contact');
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <div className="portfolio-container">
       
@@ -28,7 +35,7 @@ export default function AppPortfolio() {
           <a href="#portfolio">Portfolio</a>
           <a href="#blog">Blog</a>
           <a href="#services">Services</a>
-          <button className="btn btn-primary">Contact</button>
+          <button className="btn btn-primary" onClick={scrollToContact}>Contact</button>
         </div>
       </nav>
 
@@ -43,8 +50,8 @@ export default function AppPortfolio() {
             I strive to build immersive and beautiful web and mobile applications through 
             carefully crafted code and user-centric design.
           </p>
-          
-          <button className="btn btn-primary">Say Hello!</button>
+
+          <button className="btn btn-primary" onClick={scrollToContact}>Say Hello!</button>
           
           <div className="hero-stats">
             <div className="stat-box">
@@ -122,7 +129,7 @@ export default function AppPortfolio() {
       </section>
 
       {/* Call To Action Section */}
-      <CallToAction />
+      <CallToAction onContactClick={scrollToContact} />
 
       {/* Blog Section */}
       <Blog />

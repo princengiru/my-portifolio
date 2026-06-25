@@ -1,7 +1,7 @@
 import React from 'react';
 import forwardSlashIcon from '../assets/icons/forward-slash.svg';
 
-export default function CallToAction() {
+export default function CallToAction({ onContactClick }) {
   return (
     <section className="cta-section">
       <div className="cta-container">
@@ -13,8 +13,8 @@ export default function CallToAction() {
           Whether you need a scalable web platform, a custom mobile app, <br />
           or a complete brand identity, I am ready to help you build something exceptional.
         </p>
-        <button className="btn btn-primary cta-btn">Let's Work Together <img src={forwardSlashIcon} alt="arrow-right" /></button>
-        
+        <button className="btn btn-primary cta-btn" onClick={onContactClick}>Let's Work Together <img src={forwardSlashIcon} alt="arrow-right" /></button>
+
       </div>
     </section>
   );
