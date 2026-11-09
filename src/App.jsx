@@ -10,12 +10,50 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 import prince from "./assets/hero-image.jpeg"
 import aboutImg from "./assets/about-image.jpeg"
+import cvPdf from "./assets/docs/Portfolio CV.pdf";
+import exitCornerIcon from "./assets/icons/exit-right-corner.svg";
 
 export default function AppPortfolio() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [typedGreeting, setTypedGreeting] = useState("");
   const [typedName, setTypedName] = useState("");
   const [cursorVisible, setCursorVisible] = useState(true);
+  const [cvBlobUrl, setCvBlobUrl] = useState("");
+
+  // Create an encrypted-looking blob URL so actual file path/directory is not exposed in the browser URL
+  useEffect(() => {
+    let url = "";
+    fetch(cvPdf)
+      .then((res) => res.blob())
+      .then((blob) => {
+        const pdfBlob = new Blob([blob], { type: "application/pdf" });
+        url = URL.createObjectURL(pdfBlob);
+        setCvBlobUrl(url);
+      })
+      .catch(() => {
+        setCvBlobUrl(cvPdf);
+      });
+
+    return () => {
+      if (url) URL.revokeObjectURL(url);
+    };
+  }, []);
+
+  const handleViewCv = async (e) => {
+    if (cvBlobUrl) return;
+    e.preventDefault();
+    const newTab = window.open("about:blank", "_blank");
+    try {
+      const res = await fetch(cvPdf);
+      const blob = await res.blob();
+      const pdfBlob = new Blob([blob], { type: "application/pdf" });
+      const url = URL.createObjectURL(pdfBlob);
+      setCvBlobUrl(url);
+      if (newTab) newTab.location.href = url;
+    } catch {
+      if (newTab) newTab.location.href = cvPdf;
+    }
+  };
 
   // Typing effect starting from "Hello, I'm" down to the name
   useEffect(() => {
@@ -205,9 +243,19 @@ export default function AppPortfolio() {
             
             <div className="about-actions">
               <button className="btn btn-primary" onClick={scrollToPortfolio} >My Projects</button>
-              <a href={new URL('./assets/docs/Portfolio CV.pdf', import.meta.url).href} download="Prince_Ngiruwonsanga_CV.pdf" className="btn btn-outline">
-                 <img src={new URL('./assets/icons/download.svg', import.meta.url).href} alt="download" style={{ width: '15px'}} className='w-20'/>
-                Download CV
+              <a 
+                href={cvBlobUrl || "#"} 
+                onClick={handleViewCv}
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="btn btn-outline"
+              >
+                <img 
+                  src={exitCornerIcon} 
+                  alt="" 
+                  style={{ width: '16px', height: '16px' }}
+                />
+                View CV
               </a>
             </div>
           </div>
