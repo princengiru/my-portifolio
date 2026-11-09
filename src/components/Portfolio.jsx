@@ -9,29 +9,29 @@ export default function Portfolio() {
   const portfolioItems = [
     {
       id: 1,
-      image: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=600&h=400&fit=crop", 
-      category: "MOBILE DEVELOPMENT",
-      title: "Prince Picks Streaming App",
-      description: "A cross-platform movie streaming application built with React Native and Expo, featuring custom navigation and seamless API integration.",
-      liveLink: null,
-      status: "In Development"
-    },
-    {
-      id: 2,
-      image: chairfemmesImg, 
-      category: "FULL-STACK WEB",
-      title: "Chair Femmes",
-      description: "A web platform dedicated to holistic sexology and women's empowerment, built with PHP and CSS to offer a safe digital space for therapy and wellness services.",
-      liveLink: "https://chairfemmes.com",
+      image: gonarazaImg, 
+      category: "WEB PLATFORM",
+      title: "Gonaraza",
+      description: "A comprehensive digital marketplace and business directory connecting businesses and customers across Rwanda through dynamic listings, jobs, and digital services.",
+      liveLink: "https://gonaraza.com",
       status: "Live Preview"
     },
     {
-      id: 3,
+      id: 2,
       image: lkgroupImg, 
       category: "CORPORATE PLATFORM",
       title: "LK Group World",
       description: "A robust corporate website for a leading technology solutions provider, highlighting their innovative IT support, digital consulting, and global services.",
       liveLink: "https://lkgroupworld.com",
+      status: "Live Preview"
+    },
+    {
+      id: 3,
+      image: chairfemmesImg, 
+      category: "FULL-STACK WEB",
+      title: "Chair Femmes",
+      description: "A web platform dedicated to holistic sexology and women's empowerment, built with PHP and CSS to offer a safe digital space for therapy and wellness services.",
+      liveLink: "https://chairfemmes.com",
       status: "Live Preview"
     },
     {
@@ -54,12 +54,12 @@ export default function Portfolio() {
     },
     {
       id: 6,
-      image: gonarazaImg, 
-      category: "WEB PLATFORM",
-      title: "Gonaraza",
-      description: "A comprehensive digital marketplace and business directory connecting businesses and customers across Rwanda through dynamic listings, jobs, and digital services.",
-      liveLink: "https://gonaraza.com",
-      status: "Live Preview"
+      image: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=600&h=400&fit=crop", 
+      category: "MOBILE DEVELOPMENT",
+      title: "Prince Picks Streaming App",
+      description: "A cross-platform movie streaming application built with React Native and Expo, featuring custom navigation and seamless API integration.",
+      liveLink: null,
+      status: "In Development"
     }
   ];
 
@@ -88,7 +88,6 @@ export default function Portfolio() {
                   target="_blank" 
                   rel="noopener noreferrer" 
                   className="btn btn-outline portfolio-btn"
-                  style={{ textDecoration: 'none', display: 'inline-block', textAlign: 'center' }}
                 >
                   {item.status} &rarr;
                 </a>

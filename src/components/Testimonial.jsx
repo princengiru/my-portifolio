@@ -13,8 +13,7 @@ export default function Testimonial() {
         <div className="clients-header">
           <h2 className="section-title">Happy Clients</h2>
           <p className="section-subtitle">
-            There are many variations of passages of Lorem Ipsum available,<br/>
-            but the majority have suffered alteration.
+            I have had the privilege of collaborating with ambitious brands and organizations, delivering impactful digital experiences and scalable solutions.
           </p>
         </div>
 
@@ -23,14 +22,15 @@ export default function Testimonial() {
           <a href="https://gonaraza.com" target="_blank" rel="noopener noreferrer">
             <img src={gonarazaLogo} alt="Gonaraza" className="client-logo" />
           </a>
-          <a href="https://lkgroupworld.com" target="_blank" rel="noopener noreferrer">
-            <img src={lkGroupLogo} alt="LK Group" className="client-logo" />
-          </a>
           <a href="https://chairfemmes.com" target="_blank" rel="noopener noreferrer">
             <img src={chairFemmesLogo} alt="Chair Femmes" className="client-logo chair-femmes-logo" />
           </a>
           <a href="https://eliteconcierge.rw" target="_blank" rel="noopener noreferrer">
             <img src={eliteLogo} alt="Elite Concierge" className="client-logo" />
+          </a>
+          <a href="https://lkgroupworld.com" target="_blank" rel="noopener noreferrer" className="client-logo-lk">
+            <img src={lkGroupLogo} alt="LK Group" className="client-logo" />
+            <span className="lk-group-text">LK GROUP</span>
           </a>
         </div>
 

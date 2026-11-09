@@ -47,12 +47,14 @@ export default function Services() {
         {/* Right Column */}
         <div className="services-list-column">
           {services.map((service, index) => (
-            <div 
-              key={service.id} 
-              className={`service-card ${index === 0 ? 'active' : ''}`}
-            >
-              <h3 className="service-card-title">{service.title}</h3>
-              <p className="service-card-text">{service.description}</p>
+            <div key={service.id} className="service-item-wrapper">
+              <span className="service-card-num">0{service.id}</span>
+              <div 
+                className={`service-card ${index === 0 ? 'active' : ''}`}
+              >
+                <h3 className="service-card-title">{service.title}</h3>
+                <p className="service-card-text">{service.description}</p>
+              </div>
             </div>
           ))}
         </div>
