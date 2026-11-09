@@ -114,21 +114,22 @@ html {
   display: none;
   flex-direction: column;
   justify-content: space-between;
-  width: 28px;
-  height: 20px;
+  width: 22px;
+  height: 16px;
   background: transparent;
   border: none;
   cursor: pointer;
   padding: 0;
   z-index: 1001;
+  transition: transform 0.25s ease;
 }
 
 .hamburger-line {
   width: 100%;
-  height: 2.5px;
+  height: 2px;
   background-color: var(--text-dark);
   border-radius: 2px;
-  transition: transform 0.3s ease, opacity 0.3s ease, background-color 0.3s ease;
+  transition: transform 0.3s ease, opacity 0.25s ease, background-color 0.3s ease;
   transform-origin: left center;
 }
 
@@ -837,40 +838,42 @@ html {
   }
 
   .process-grid {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
     width: 100%;
+    align-items: start;
+    padding-bottom: 2rem;
   }
 
   .process-card {
-    width: 74%;
-    max-width: 280px;
-    padding: 1.5rem 1.25rem;
-    border-radius: 0;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 !important;
+    padding: 1.25rem 1rem;
+    border-radius: 12px;
     background-color: #232819;
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
     border: 1px solid rgba(255, 255, 255, 0.05);
+    box-sizing: border-box;
   }
 
-  /* Alternating staggered zig-zag layout matching the design */
+  /* 2x2 Grid staggered layout matching template */
   .process-card:nth-child(odd) {
-    margin-right: auto;
-    margin-left: 0;
-    transform: none;
+    margin: 0 !important;
+    transform: none !important;
   }
 
   .process-card:nth-child(even) {
-    margin-left: auto;
-    margin-right: 0;
-    transform: none;
+    margin: 0 !important;
+    transform: translateY(1.75rem) !important;
   }
 
   .process-icon-container {
-    width: 44px;
-    height: 44px;
-    border-radius: 0.75rem;
-    margin-bottom: 1rem;
+    width: 42px;
+    height: 42px;
+    border-radius: 0.65rem;
+    margin-bottom: 0.85rem;
   }
 
   .process-icon {
@@ -879,13 +882,13 @@ html {
   }
 
   .process-card-title {
-    font-size: 1.1rem;
-    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    margin-bottom: 0.4rem;
   }
 
   .process-card-text {
-    font-size: 0.8rem;
-    line-height: 1.5;
+    font-size: 0.74rem;
+    line-height: 1.45;
   }
 }
 
@@ -913,19 +916,40 @@ html {
     margin-left: 1rem;
   }
 
+  .process-grid {
+    gap: 0.75rem;
+    padding-bottom: 1.5rem;
+  }
+
   .process-card {
-    width: 76%;
-    max-width: 260px;
-    padding: 1.35rem 1.15rem;
-    border-radius: 0;
+    padding: 1rem 0.85rem;
+    border-radius: 10px;
+  }
+
+  .process-card:nth-child(even) {
+    transform: translateY(1.25rem) !important;
+  }
+
+  .process-icon-container {
+    width: 36px;
+    height: 36px;
+    border-radius: 0.5rem;
+    margin-bottom: 0.65rem;
+  }
+
+  .process-icon {
+    width: 17px;
+    height: 17px;
   }
 
   .process-card-title {
-    font-size: 1.05rem;
+    font-size: 0.92rem;
+    margin-bottom: 0.35rem;
   }
 
   .process-card-text {
-    font-size: 0.76rem;
+    font-size: 0.68rem;
+    line-height: 1.4;
   }
 }
 
