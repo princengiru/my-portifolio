@@ -4,8 +4,10 @@ export default function Blog() {
   const [blogPosts, setBlogPosts] = useState([]);
   const [currentPage, setCurrentPage] = useState(0);
   const [totalPages, setTotalPages] = useState(1);
+  const [isPaused, setIsPaused] = useState(false);
 
   const gridRef = useRef(null);
+  const pauseTimeoutRef = useRef(null);
 
   useEffect(() => {
     const fetchBlogs = async () => {
@@ -43,6 +45,7 @@ export default function Blog() {
 
     const pages = Math.ceil(blogPosts.length / cardsPerView);
     setTotalPages(pages);
+    setCurrentPage((prev) => (prev >= pages ? 0 : prev));
   };
 
   useEffect(() => {
@@ -58,9 +61,56 @@ export default function Blog() {
     };
   }, [blogPosts]);
 
+  // Pause auto-sliding briefly during and after user interaction
+  const pauseTemporarily = (delay = 3500) => {
+    setIsPaused(true);
+    if (pauseTimeoutRef.current) {
+      clearTimeout(pauseTimeoutRef.current);
+    }
+    pauseTimeoutRef.current = setTimeout(() => {
+      setIsPaused(false);
+    }, delay);
+  };
+
+  // Pause when the browser tab is hidden to save performance
+  useEffect(() => {
+    const handleVisibility = () => {
+      if (document.hidden) {
+        setIsPaused(true);
+      } else {
+        setIsPaused(false);
+      }
+    };
+    document.addEventListener("visibilitychange", handleVisibility);
+    return () => {
+      document.removeEventListener("visibilitychange", handleVisibility);
+      if (pauseTimeoutRef.current) clearTimeout(pauseTimeoutRef.current);
+    };
+  }, []);
+
+  // Auto-slide effect with a fair viewing time (5.5 seconds per view)
+  useEffect(() => {
+    if (totalPages <= 1 || isPaused) return;
+
+    const autoSlideTimer = setTimeout(() => {
+      const nextPage = (currentPage + 1) % totalPages;
+      if (gridRef.current) {
+        const { clientWidth } = gridRef.current;
+        gridRef.current.scrollTo({
+          left: nextPage * clientWidth,
+          behavior: "smooth",
+        });
+      }
+      setCurrentPage(nextPage);
+    }, 5500); // 5.5s gives users fair time to scan titles, read-times, and covers
+
+    return () => clearTimeout(autoSlideTimer);
+  }, [currentPage, isPaused, totalPages]);
+
   const handleScroll = () => {
     if (gridRef.current) {
       const { scrollLeft, clientWidth } = gridRef.current;
+      if (clientWidth === 0) return;
 
       // Only change page when we're at the start of a page (first card visible)
       // Use a threshold to prevent switching during scroll
@@ -86,6 +136,7 @@ export default function Blog() {
       });
 
       setCurrentPage(index);
+      pauseTemporarily(4000); // Give user uninterrupted time on their selected view
     }
   };
 
@@ -105,6 +156,10 @@ export default function Blog() {
           className="blog-grid"
           ref={gridRef}
           onScroll={handleScroll}
+          onMouseEnter={() => setIsPaused(true)}
+          onMouseLeave={() => setIsPaused(false)}
+          onTouchStart={() => setIsPaused(true)}
+          onTouchEnd={() => pauseTemporarily(3500)}
         >
           {blogPosts.map((post) => (
             <a
